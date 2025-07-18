@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and outputs
+*.log
+
+# Compiled files
+*.so
+*.dll
+*.exe
+
+# Data and model outputs
+/images/
+/diagrams/
+/faiss_index/
+/Summary Output/
+/Explanation Output/
+
+# Python egg info
+*.egg-info/
+dist/
+build/
+
+# JSON outputs (optional, if generated)
+*.json
+
+# Ignore requirements lock files (optional)
+poetry.lock
