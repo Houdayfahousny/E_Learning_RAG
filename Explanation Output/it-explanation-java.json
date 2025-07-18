@@ -1,0 +1,9 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "Introduzione a Java",
+      "script": "Ciao! Questo corso di formazione è dedicato all'introduzione alla programmazione in Java. Java è un linguaggio di programmazione molto popolare creato nel 1995, è di proprietà di Oracle e più di 3 miliardi di dispositivi lo utilizzano."
+    }
+  ]
+}

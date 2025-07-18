@@ -1,0 +1,14 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "introduction",
+      "script": "Welcome to our Java introduction! Today, we're going to explore what Java is, its history, and its uses. Java is a programming language that was created in 1995 by Sun Microsystems, which is now owned by Oracle Corporation. Java is used on more than 3 billion devices worldwide, making it one of the most widely used programming languages today. It's a versatile language that can be used for developing a wide range of applications, including Android apps, web applications, and desktop applications."
+    },
+    {
+      "id": 2,
+      "title": "syntaxe de base",
+      "script": "Hello everyone! Today we're going to explore the syntax of Java. In the previous chapter, we created a Java file called Main.java and used some code to print \"Hello World\" to the console. Now, let's dive deeper into the basics of Java syntax. Firstly, **point 1**: In Java, we use semicolons (;) to terminate statements. This is similar to other programming languages like C or C++. Let me show you an example: `System.out.println(\"Hello World!\");`. As you can see, we're using a semicolon at the end of the statement."
+    }
+  ]
+}

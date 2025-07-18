@@ -1,0 +1,182 @@
+[
+  {
+    "slide_number": 1,
+    "title": "Slide 1",
+    "content": "TECHNICAL TRAININGS\n\nJava EE / Spring\n\nTYPE\nOnline Course\n\nCONTENTS\n\nJava EE Architecture Overview\nSpring Framework\nSpring vs Java EE\nSpring Modules\nSpring Modules Overview\nSpring Core\nSpring AOP\nSpring Batch\nSpring MVC\nSpring Security\nSpring Core\nIOC / Dependency Injection\nConstructor/ Setter/ Field Dependency injection\nBeanFactory\nApplicationContext\nBean lifecycle\nBean scopes\nXml Configuration\nAnnotation Based Configuration\nEssential Spring Annotations\n@Configuration\n@ComponentScan\n@Import\n@ImportResource\n@PropertySource\n@Value\n@Bean\n@Component @Service @Repository @Controller\n@Autowired\n@Qualifier \n@Primary \n@Lazy \n@Transactional\n\nDURATION\n2 hours\n\nBASIC INFORMATION\n\nLANGUAGES\nEnglish, Arabic\n\nPREREQUISITES\nJava Knowledge\nCATEGORIES \nCJ– CD – CD2 (JAVA)\n\nOBJECTIVES\n\n\tUnderstand the big picture of Java EE Architecture and it’s components\n\tUnderstand differences between Java EE and Spring\nUnderstand the reasons behind the development of Spring framework\n\tUnderstand the big picture around Spring Core, Spring AOP, Spring MVC, Spring Security, Spring Batch modules \n\tDeep Dive into Spring Core module\n\tUnderstand essential Spring annotations"
+  },
+  {
+    "slide_number": 2,
+    "title": "Slide 2",
+    "content": "INTRODUCTION"
+  },
+  {
+    "slide_number": 3,
+    "title": "Java Enterprise Edition",
+    "content": "A Provider that implements these specifications, must meet certain conformance requirements in order to be certified  Full or Web Jakarta EE compliant.\n\nExample of Java EE Certified Full Compliant : \nOracle WebLogic Server\nOracle Glassfish\nIBM WebSphere Application Server Liberty\nRedhat Wildfly\nJBoss Enterprise Application Platform\n\nA set of specifications for enterprise application features : \n\nWeb specifications : \nJava Servlet\nJava Server Faces\nJava Expression Language\nWeb service specifications : \nJava RESTful Web Services\nJava JSON Processing\nJava XML Binding\nJava XML Web Services\nEnterprise specifications : \nEnterprise Java Beans\nJava Persistence API\nJava Transaction API\nJava Messaging Service\nOther specifications : \nJava Batch\nValidation"
+  },
+  {
+    "slide_number": 4,
+    "title": "Java EE Architecture – Java EE Containers",
+    "content": ""
+  },
+  {
+    "slide_number": 5,
+    "title": "Java EE Architecture – Web Container",
+    "content": "Also named Servlet Container\n\nManage the lifecycle of servlets\n\nHandle Servlet requests / responses\n\nDynamically generates HTML pages from JSP files\n\nExample : Apache Tomcat, and all Full JavaEE Implementations (Weblogic, Wildfly, Websphere …)"
+  },
+  {
+    "slide_number": 6,
+    "title": "Java EE Architecture – EJB Container",
+    "content": "Manage Lifecycle of EJB Beans\n\n Manage the binding of EJB beans to the naming for remote access to them\n\nTransaction management\n\nManages a pool of bean instances\n\nHandles Security"
+  },
+  {
+    "slide_number": 7,
+    "title": "Spring Framework",
+    "content": "Initially Developed by Rod Johnson and released in 2004 v1.0 (first prod release)\n\nDeveloped based on the principles of dependency injection (DI) and inversion of control (IoC)\n\nOver the years more modules was added to provide services like Aspect-oriented programming, Data access, Transaction management, Model–view–controller, Authentication and authorization, and Testing\n\nThe goal of it’s first development was to overcome drawbacks encountered in J2EE\n\nSpring came as an alternative to EJB\n\nEnables developers to develop enterprise-class applications using POJOs\n\nYou do not need an EJB container product such as an application server but you have the option of using only a robust servlet container such as Tomcat or some commercial product.\n\nLightweight IoC containers , especially when compared to EJB containers\n\nIn EJB / Servlet, need to extend some classes, in Spring we use only POJO\n\nSpring lightweight container, depend only on JDK and Spring Jars => Platform independent\n\nEJB heavyweight depend on Application Server, and application server depend on OS"
+  },
+  {
+    "slide_number": 8,
+    "title": "Spring Framework – J2EE drawbacks",
+    "content": "Drawbacks encountered in EJB 2.x specification : \n\nThe business logic implementation class must implement an interface from the EJB framework package : \n \t=> Tight coupling between the developer-written code and the interface classes from the EJB framework package.\n\nimplementation of several unnecessary callback methods (ejbCreate, ejbPassivate, ejbActivate) not directly related to the main design goal of the EJB\n\nEJB 2.X deployment descriptors are verbose, complex, and error prone\n\nEJBs are difficult to test, since the application needs a J2EE container to provide all the services required to correctly run the EJB component"
+  },
+  {
+    "slide_number": 9,
+    "title": "Spring Version History",
+    "content": ""
+  },
+  {
+    "slide_number": 10,
+    "title": "Spring Modules - Overview",
+    "content": "Features of Spring framework are organized into Modules\n\nSpring modules are grouped based on their primary features (Data Access/ Integration, Web, Core, AOP, Test)"
+  },
+  {
+    "slide_number": 11,
+    "title": "Spring Core",
+    "content": "Spring Core container module implements IoC using Dependency Injection\n\nBeanFactory interface is the representation of the Spring IoC container that is responsible for containing and  managing the beans.\n\nA Bean is an object created / managed by Spring IOC container\n\nSpring IoC container consumes some form of configuration metadata\n\nConfiguration metadata (XML / Annotations) is how you inform the Spring container as to how to “instantiate, configure, and assemble [the objects in your application (beans)]"
+  },
+  {
+    "slide_number": 12,
+    "title": "Spring AOP",
+    "content": "AOP (Aspect Oriented Programming) : \n\nProgramming paradigm that allow the separation of cross cutting concerns from the business concerns\nTransaction management is an example of cross cutting concern\n\nCross cutting concern :\nFunctionality needed in many places of the application \n\nExamples : \nLogging (log before/after method call)\nTransaction management (begin/commit)\nSecurity (role check before method call)"
+  },
+  {
+    "slide_number": 13,
+    "title": "Spring AOP",
+    "content": "AOP Concepts : \n\nAspect : \na modularization of a concern that cuts across multiple classes.\nJoin point : \nA point during the execution of a program, In Spring AOP, a join point always represents a method execution.\nAdvice : \nAction taken by an aspect at a particular join point\nAdvice types : \n\"around,\" \"before\" and \"after“\nPointcut : \nA predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut\nTarget Object : \nproxied object being advised by one or more aspects\nAOP Proxy : \nobject created by the AOP framework in order to implement the aspect contracts (advise method executions and so on)\nWeaving : \nlinking aspects with other application types or objects to create an advised object"
+  },
+  {
+    "slide_number": 14,
+    "title": "Spring Batch",
+    "content": "Framework for developing batch applications\n\nProvides reusable functions that are essential in processing large volumes of records, including logging/tracing, transaction management, job processing statistics, job restart, skip, \n\nApplication Layer : \ncontains batch jobs written by developers using Spring Batch\n\nCore Layer : \ncontains the core runtime classes necessary to launch and control a batch job.\nIt includes implementations for JobLauncher, Job, and Step\n\nInfrastructure Layer : \ncontains common readers and writers and services (like RetryTemplate), which are used both by application developers (like ItemReader, ItemWriter), and the core framework (like retry)\n\nTypical Batch program : \n\t1) Reads a large number of records from a database, file, or queue.\n\t2) Process the data in some fashion\n\t3) Writes back data in a modified form"
+  },
+  {
+    "slide_number": 15,
+    "title": "Spring MVC",
+    "content": "Figure : Request Processing Workflow\n\nProvide Model-View-Controller architecture : \n\nModel : encapsulate the application data\n\nView : render the model data\n\nController : process user requests, build the model after calling business service(s), and pass it to the view for rendering\n\nDispatcher Servlet (Front Controller): \nhandles all the HTTP requests and responses."
+  },
+  {
+    "slide_number": 16,
+    "title": "Spring Security",
+    "content": "Provide support for authentication and authorization\n\nProvide protection against common attacks\n\nprovides a default set of security related HTTP response headers to provide secure defaults\n\nThe default for Spring Security is to include the following headers in the http response :"
+  },
+  {
+    "slide_number": 17,
+    "title": "Spring Core – IOC / Dependency Injection",
+    "content": "Inversion of control is a design principle that allows classes to be loosely coupled and, therefore, easier to test and maintain.\n\nThe control of objects and their dependencies is transferred from the main program to a container or framework\n\nDependency Injection is an implementation of the IOC design principle\n\nThe Spring container instantiates and manages the lifecycle of the objects that are a part of the program\n\nThe developer provides the information related to what objects and dependencies are required by the application\n\nBenefits of IOC : \nReduces amount of application code\nDecreases coupling between classes\nMakes the application easier to test and maintain\n\nDependency Injection\n\nIOC Container\n\nInversion of Control\n\nPrinciple\n\nPattern\n\nFramework"
+  },
+  {
+    "slide_number": 18,
+    "title": "Constructor dependency injection",
+    "content": "Is the recommended way of dependency injection in Spring\n\nFrom Spring 4.3, classes with a single constructor can omit the @Autowired annotation\n\nTestability : no need to mock dependencies\n\nAll required dependencies are available at initialization time \nIOC container make sure all constructor arguments are available before passing them to constructor\n\nDesign for immutability : \n=> Mark dependencies final\nSecure behavior of beans (dependencies can’t be changed later) => unflexibility to take into account\nWhen refactoring, detect errors after refactoring at compile time\n\nLoose coupling with the DI container"
+  },
+  {
+    "slide_number": 19,
+    "title": "Setter dependency injection",
+    "content": "Use of @Autowired on setter methods\n\nPoor readability of the code\n\nRequired use of @Autowired => tight coopling between the code and the DI container"
+  },
+  {
+    "slide_number": 20,
+    "title": "Field dependency injection",
+    "content": "Fields of the class are annotated with @Autowired\n\nThe code is more clean with field injection, avoids boilerplate code (setter), and no need to declare constructor\n\nDon’t work with final (Immutable) fields\n\t=> final fields must be instantiated at class instantiation\n\t=> The field injection runs after class instantiation\n\n\nRequired use of @Autowired => tight coopling between the class code and the DI container"
+  },
+  {
+    "slide_number": 21,
+    "title": "BeanFactory",
+    "content": "The root interface for accessing a Spring bean container\n\nManage the beans and their dependencies\n\nUse a configuration registry (xml file) for creating beans and injecting the dependencies between them\n\nsupports only Singleton and Prototype bean scopes\n\ndoes not support Annotations for autowiring\n\t=> need to use autowire attribute in XML\n\ndoes not provides i18n / internationalization functionality.\n\ninstantiate beans only when you call getBean() method(s) : \n\nleads to not detecting configuration errors at startup\nThis problem is solved in ApplicationContext implementations, where it instantiate all singleton beans at startup"
+  },
+  {
+    "slide_number": 22,
+    "title": "ApplicationContext",
+    "content": "ApplicationContext is a sub-interface of the BeanFactory\n\nApplicationContext allow Java configuration in addition to XML configuration\n\nApplicationContext is mostly used in production applications\n\n\nAdditional features of ApplicationContext : \n\nMessage resolution and Internationalization : \n\nProvide ResourceBundleMessageSource implementation of MessageSource interface, that allow us for example to create different properties files for each language messages, and we load the translated message based on the actual local of the client that sent the request to our backend application\n\nEvent publishing : \nAbility to publish events to beans registred as listeners (example : ContextStartedEvent, ContextStoppedEvent)\nprovided through the ApplicationEvent class and ApplicationListener interface\n\nBeanFactory\n\nApplicationContext\n\nClassPathXmlApplication\nContext\n\nFileSystem\nXml\nApplication\nContext\n\nAnnotation\nConfig\nApplication\nContext"
+  },
+  {
+    "slide_number": 23,
+    "title": "Bean Lifecycle",
+    "content": "-"
+  },
+  {
+    "slide_number": 24,
+    "title": "Bean scopes",
+    "content": "Singleton : \nIs the default scope, one single instance is created per application context\n\nPrototype : \nA different bean instance is returned every time it is requested from the container.\n\nRequest : \ncreates a bean instance for a single HTTP request\n\nSession : \n creates a bean instance for an HTTP Session.\n\nApplication : \ncreates the bean instance for the lifecycle of a ServletContext\n\nWebsocket : \ncreates the bean instance for a particular WebSocket session"
+  },
+  {
+    "slide_number": 25,
+    "title": "Xml Based configuration",
+    "content": "Is the first provided Spring configuration style when it was born\n\nWe create an xml file specifying the spring xml schema inside <beans> tag\n\nWe declare our beans and the dependencies between them inside <bean> tags\n\nXml configuration files grow and become difficult to maintain, and error prone\n\nWe can’t detect type errors at compile time\n\nDifficulty in maintenance of large xml files"
+  },
+  {
+    "slide_number": 26,
+    "title": "Annotation based configuration",
+    "content": "From Spring 2.5 it became possible to configure the dependency injection using annotations\n\nBean wiring is configured using annotations\n\n<context:annotation-config> :  used to process annotations in beans already registered in the application context\n\n<context:component-scan> : in addition to what <context:annotation-config> do, it also scan packages to find and register beans within the applicationcontext\n\nAnnotation injection is performed before XML injection\nThe xml configuration overrides the annotation configuration in case they are similar\n\n  Need to enable annotation wiring in the xml configuration file using either <context:annotation-config> or <context:component-scan>"
+  },
+  {
+    "slide_number": 27,
+    "title": "Java based configuration",
+    "content": "Enables to write the Spring configuration without using xml \n\nAnnotating a class with the @Configuration indicates that the class can be used by the Spring IoC container as a source of bean definitions\n\nThe @Bean annotation tells Spring that a method annotated with @Bean will return an object that should be registered as a bean in the Spring application context\n\nWe create the ApplicationContext with the implementation AnnotationConfigApplicationContext that we give it as parameter the base configuration class\n\nWe can register as many configuration classes as we want with the register() method of AnnotationConfigApplicationContext"
+  },
+  {
+    "slide_number": 28,
+    "title": "Spring Annotations - @Configuration",
+    "content": "Used over a class to tell it’s a spring configuration class that contains @Bean definition methods\n\nCan be used also with @ComponentScan to scan candidates for bean creation"
+  },
+  {
+    "slide_number": 29,
+    "title": "Spring Annotations - @ComponentScan",
+    "content": "Used along with the @Configuration annotation to specify the packages that we want to be scanned\n\nIf used without arguments, the current package in which the class annotated with @ComponentScan is present, and all it’s subpackages are scanned\n\nExample : \n\n\n\t@ComponentScan(basePackages = {\"com.example.util”, “com.example.service”})\n\n\t@ComponentScan(basePackages = \"com.example.util , com.example.service\")\n\n@ComponentScan(basePackages = \"com.example.util ; com.example.service\")\n\n@ComponentScan(basePackages = \"com.example.util com.example.service\")\n\n@ComponentScan(basePackages = {\"com.example.util com.example.service\"})"
+  },
+  {
+    "slide_number": 30,
+    "title": "Spring Annotations - @Import",
+    "content": "Indicates one or more component classes to import — typically @Configuration classes \n\n Useful when we want to group multiple configuration classes into one\n\nAccept @Component classes (@Configuration also as it inherit from @Component)\n\nCan be used together with @ComponentScan to improve performance of application startup, while loading only some groups of bean configuration\n\nExample :\n\npackage com.hr.service;\n \n@Configuration \n@ComponentScan \npublic class HrServiceConfiguration {\n }\n\npackage com.hr;\n\n@Configuration \n@Import(HrServiceConfiguration.class)\npublic class HrConfiguration {\n }"
+  },
+  {
+    "slide_number": 31,
+    "title": "Spring Annotations - @PropertySource",
+    "content": "Introduced in Spring 3.1\n\nUsed with @Configuration for registering properties file(s) in the application Environment\n\nNot supported when we use YAML files for properties\n\nIn Spring Boot convention, if we put application.properties under src/main/resources it is automatically detected without need of @PropertySource\n\n@Configuration @PropertySource(\"classpath:app.properties\")    public class MainConfig {\n \n }\n\n// Using Java 8 repeatable annotation\n\n@PropertySource(\"classpath:app.properties\") @PropertySource(\"classpath:database.properties\")\n@Configuration\n public class MainConfig {\n\n}"
+  },
+  {
+    "slide_number": 32,
+    "title": "Spring Annotations - @Value",
+    "content": "Used to inject values into fields in Spring managed beans\n\nGenerally, we use it to inject values from properties file(s) registered in the environment\n\nWe can also inject raw values\n\nCan be applied at the field or constructor / method parameter level\n\n@Value(“raw value\") \nprivate String rawValue;\n\n@Value(\"${value.from.properties.file}\") \nprivate String valueFromPropertiesFile;\n\n@Value(\"${value.from.properties.file: defaultValue}\") \nprivate String valueFromPropertiesFile;"
+  },
+  {
+    "slide_number": 33,
+    "title": "Spring Annotations - @Qualifier",
+    "content": "Solve the problem when Spring doesn’t know which bean to inject\n\nProblem Case : \nWe have multiple beans of the same type in the application context\nSpring by default resolve the autowired entries by type\nSpring throw NoUniqueBeanDefinitionException\n\n@Service\npublic class CustomerServiceImpl implements      CustomerService { \n\n   @Autowired \n   @Qualifier(“nttSmsService\") \n   private SmsService smsService; \n\n}\n\n@Component(“nttSmsService”)\npublic class NttSmsService implements SmsService{\n\n    // …. \n   \n}"
+  },
+  {
+    "slide_number": 34,
+    "title": "Spring Annotations - @Primary",
+    "content": "Introduced in Spring 3.0\n\nUsed to give higher preference to a bean when there are multiple beans of the same type\n\nUsed specifically in following cases : \n\nCase 1 : We declare multiple beans of same type in @Configuration classes, in which case @Qualifier will not solve the issue\n\nCase 2 : We use @ComponentScan over a configuration class, and we declare multiple @Component of the same type in the package candidate for scan\n\nUseful when we want to specify which bean of a certain type should be injected by default\n\nIf both the @Qualifier and @Primary annotations are present, then the @Qualifier annotation will have precedence"
+  },
+  {
+    "slide_number": 35,
+    "title": "Spring Annotations - @Lazy",
+    "content": "Spring by default creates all singleton beans eagerly at startup of the application context\nEarlier detection of possible errors\n\n@Lazy is used when we want to initialize a bean that we know is rarely used in the application\n\n@Lazy\n@Configuration\npublic class MainConfig {\n    // All beans defined here will be lazily loaded      \n }\n\n@Lazy\n@Component\npublic class RarelyUsedService{\n }\n\n@Service\npublic class CustomerServiceImpl implements CustomerService{\n    @Lazy\n    @Autowired\n    private RarelyUsedService rarelyUsedService;\n    \n }"
+  },
+  {
+    "slide_number": 36,
+    "title": "Spring Annotations - @Transactional",
+    "content": "Is the declarative approach to manage transactions with Spring\n\nCan be used on class or method level\n\nSpring creates proxies for all the classes annotated or containing in method level @Transactional annotation\n\nThe Proxy allow Spring to inject transactional logic before and after the running method\n\nBy default the rollback of the transaction happens when runtime exceptions or errors occur\n\nWe can manage rollback rules by using rollbackFor and noRollbackFor\n\nIf the Transactional bean is implementing an interface : \n         => only external method calls of the transactional method will start a transaction\n         => In this specific case don’t call the transactional method from a method within the same class\n         => This is a limitation of the Java Dynamic Proxy created by Spring for Bean classes that implement     \tinterfaces (only external method calls that come in through the proxy will be intercepted)\n\nOnly public methods should be annotated with @Transactional"
+  }
+]

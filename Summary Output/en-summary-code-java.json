@@ -1,0 +1,16 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "introduction",
+      "summary": "<ul>\n<li><strong>Point 1</strong>: Java is a programming language created in 1995 by Sun Microsystems (now owned by Oracle Corporation).</li>\n<li><strong>Point 2</strong>: Java is used on more than 3 billion devices worldwide, making it one of the most widely used programming languages today.</li>\n<li><strong>Point 3</strong>: Java is a versatile language that can be used for developing a wide range of applications, including Android apps, web applications, and desktop applications.</li>\n</ul>",
+      "example_code": "<pre><code class='language-java'>\n// Example: Printing \"Hello World\" in Java\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n}\n</code></pre>"
+    },
+    {
+      "id": 2,
+      "title": "syntaxe de base",
+      "summary": "<ul><li>Résumé indisponible</li></ul>",
+      "example_code": "<pre><code class='language-java'>\npublic class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World!\"); // prints \"Hello World!\" to the console\n  }\n}\n</code></pre>"
+    }
+  ]
+}

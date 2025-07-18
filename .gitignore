@@ -32,11 +32,7 @@ Thumbs.db
 *.exe
 
 # Data and model outputs
-/images/
-/diagrams/
-/faiss_index/
-/Summary Output/
-/Explanation Output/
+
 
 # Python egg info
 *.egg-info/
@@ -44,7 +40,6 @@ dist/
 build/
 
 # JSON outputs (optional, if generated)
-*.json
 
 # Ignore requirements lock files (optional)
 poetry.lock

@@ -1,0 +1,10 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "Introduzione a Java",
+      "summary": "<ul>\n<li><strong>Punto 1</strong>: Il linguaggio di programmazione Java è utilizzato per creare software, applicazioni mobili, web e altre tecnologie.</li>\n<li><strong>Punto 2</strong>: Java è proprietà di Oracle e ha una vasta gamma di utilizzi, tra cui la creazione di giochi, applet e applicazioni desktop.</li>\n<li><strong>Punto 3</strong>: In questo corso, imparerete a scrivere programmi Java di base e a creare esempi reali.</li>\n</ul>",
+      "example_code": "<pre><code class='language-java'>\n// Esempio di codice per stampare \"Hello World\"\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n</code></pre>"
+    }
+  ]
+}
